@@ -1,0 +1,128 @@
+body {
+    margin: auto;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    max-width: 1400px;
+}
+
+.header {
+    background-color: #ffffff6e;
+    border-bottom: 1px solid #9a9a9a;
+}
+
+.headercontainer {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logolink {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+nav .activepage {
+    color: #4046ff;
+    font-weight: bold;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 8px;
+    border-bottom: 1px solid #ccc;
+    background-color: #eff6ff;
+}
+
+.card-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-badge input {
+    margin: 0;
+    height: 1rem;
+    width: 1rem;
+}
+
+.badge {
+    background-color: #007bff;
+    /* Adjust color as needed */
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.card h2 {
+    margin: 5px 0 0 0;
+    font-size: 1.25rem;
+
+}
+
+.card-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555555;
+    padding: 16px 24px 24px;
+}
+
+.card-body p {
+    margin: 0;
+}
+.footercontainer{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 4rem;
+}
+.footer {
+    background-color: #ffffff6e;
+    border-top: 1px solid #9a9a9a;
+    padding: 1rem 0;
+    text-align: center;
+}
