@@ -10,7 +10,12 @@ body {
     padding-left: 2rem;
     max-width: 1400px;
 }
-
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
 .header {
     background-color: #ffffff6e;
     border-bottom: 1px solid #9a9a9a;
@@ -71,7 +76,7 @@ nav .activepage {
     flex-direction: column;
     padding: 24px 24px 8px;
     border-bottom: 1px solid #ccc;
-    background-color: #eff6ff;
+    border-radius: 8px 8px 0 0;
 }
 
 .card-badge {
@@ -87,16 +92,34 @@ nav .activepage {
 }
 
 .badge {
-    background-color: #007bff;
-    /* Adjust color as needed */
-    color: #fff;
+    
     border-radius: 4px;
     padding: 4px 8px;
     margin-right: 8px;
     font-size: 0.75rem;
     font-weight: 500;
 }
-
+.html-badge{
+    background-color: #007bff;
+    color: #fff;
+}
+.html-header{
+    background-color: #b1d3ff;
+}
+.css-badge{
+    background-color: #cb2eff;
+    color: #fff;
+}
+.css-header{
+    background-color: #edb6ff;
+}
+.js-badge{
+    background-color: #3cff00;
+    color: #fff;
+}
+.js-header{
+    background-color: #bcffbf;
+}
 .card h2 {
     margin: 5px 0 0 0;
     font-size: 1.25rem;
@@ -113,12 +136,99 @@ nav .activepage {
 .card-body p {
     margin: 0;
 }
+.summary-section{
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    margin-top: 40px;
+}
+.summary-cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.summary-card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.summary-card .card-count{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.summary-card .card-text{
+    font-size: 1rem;
+    color: #000000;
+}
+.card-count.html-count{
+    color: #007bff;
+}
+.card-count.css-count{
+    color: #cb2eff;
+}
+.card-count.js-count{
+    color: #3cff00;
+}
+
+.success{
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+.success-text{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.reward{
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    color: #000;
+}
+.reward-text{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.rewardimage{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .footercontainer{
     margin-right: auto;
     margin-left: auto;
     padding-right: 2rem;
     padding-left: 2rem;
-    height: 4rem;
+    height: 2rem;
 }
 .footer {
     background-color: #ffffff6e;
