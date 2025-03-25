@@ -1,6 +1,7 @@
 body {
     margin: auto;
     font-family: "Inter", sans-serif;
+    background-color: #CBEDF7;
 }
 
 .container {
@@ -10,15 +11,19 @@ body {
     padding-left: 2rem;
     max-width: 1400px;
 }
-.show{
+
+.show {
     display: block;
 }
-.hide{
+
+.hide {
     display: none;
 }
+
 .header {
-    background-color: #ffffff6e;
-    border-bottom: 1px solid #9a9a9a;
+    background-color: #f0fbfd;
+    box-shadow: 0px 2px 20px #7bcdff;
+    padding: 1rem 0;
 }
 
 .headercontainer {
@@ -40,6 +45,7 @@ a {
 .logolink {
     font-size: 2rem;
     font-weight: bold;
+    color: #0575b9;
 }
 
 nav {
@@ -51,8 +57,28 @@ nav {
 }
 
 nav .activepage {
-    color: #4046ff;
+    color: #0575b9;
     font-weight: bold;
+    border-bottom: 2px solid #0575b9;
+}
+
+.title-section {
+    text-align: center;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-section h1 {
+    font-weight: 700;
+    color: #0575b9;
+}
+
+.title-section p {
+    font-size: 1.25rem;
+    color: #000000;
+
 }
 
 .card-section {
@@ -62,21 +88,21 @@ nav .activepage {
     align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+
 }
 
-.card {
-    border: 1px solid #ccc;
+.card-div {
+    box-shadow: -2px 6px 20px #7bcdff;
     border-radius: 8px;
 
 
 }
 
-.card-header {
+.card-top {
     display: flex;
     flex-direction: column;
     padding: 24px 24px 8px;
-    border-bottom: 1px solid #ccc;
-    border-radius: 8px 8px 0 0;
+    border-radius: 7px 7px 0 0;
 }
 
 .card-badge {
@@ -92,35 +118,42 @@ nav .activepage {
 }
 
 .badge {
-    
+
     border-radius: 4px;
     padding: 4px 8px;
     margin-right: 8px;
     font-size: 0.75rem;
     font-weight: 500;
 }
-.html-badge{
+
+.html-badge {
     background-color: #007bff;
     color: #fff;
 }
-.html-header{
+
+.html-header {
     background-color: #b1d3ff;
 }
-.css-badge{
+
+.css-badge {
     background-color: #cb2eff;
     color: #fff;
 }
-.css-header{
+
+.css-header {
     background-color: #edb6ff;
 }
-.js-badge{
+
+.js-badge {
     background-color: #3cff00;
     color: #fff;
 }
-.js-header{
+
+.js-header {
     background-color: #bcffbf;
 }
-.card h2 {
+
+.card-div h2 {
     margin: 5px 0 0 0;
     font-size: 1.25rem;
 
@@ -136,13 +169,22 @@ nav .activepage {
 .card-body p {
     margin: 0;
 }
-.summary-section{
+
+.summary-section {
     padding: 40px;
     border: 1px solid #ccc;
-    border-radius: 8px; 
+    border-radius: 8px;
     margin-top: 40px;
 }
-.summary-cards{
+
+.progress-1 {
+    width: 100%;
+    height: 20px;
+    background:
+        linear-gradient(#0575b9 0 0) 0/0% no-repeat #fff;
+}
+
+.summary-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: space-between;
@@ -150,7 +192,8 @@ nav .activepage {
     gap: 2rem;
     margin-top: 2rem;
 }
-.summary-card{
+
+.summary-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
@@ -159,55 +202,64 @@ nav .activepage {
     justify-content: center;
     align-items: center;
 }
-.summary-card .card-count{
+
+.summary-card .card-count {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0;
 }
-.summary-card .card-text{
+
+.summary-card .card-text {
     font-size: 1rem;
     color: #000000;
 }
-.card-count.html-count{
+
+.card-count.html-count {
     color: #007bff;
 }
-.card-count.css-count{
+
+.card-count.css-count {
     color: #cb2eff;
 }
-.card-count.js-count{
+
+.card-count.js-count {
     color: #3cff00;
 }
 
-.success{
+.success {
     margin-top: 40px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #eeeeee;
+    background-color: #f8f8f8;
     color: #000;
     display: flex;
     align-items: center;
 }
-.success-text{
+
+.success-text {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
-.reward{
+
+.reward {
     margin-top: 40px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #eeeeee;
+    background-color: #f8f8f8;
     color: #000;
 }
-.reward-text{
+
+.reward-text {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 20px;
     text-align: center;
 }
-.rewardimage{
+
+.rewardimage {
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -221,15 +273,14 @@ nav .activepage {
 
 
 
-
-
-.footercontainer{
+.footercontainer {
     margin-right: auto;
     margin-left: auto;
     padding-right: 2rem;
     padding-left: 2rem;
     height: 2rem;
 }
+
 .footer {
     background-color: #ffffff6e;
     border-top: 1px solid #9a9a9a;
