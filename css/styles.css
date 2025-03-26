@@ -177,11 +177,13 @@ nav .activepage {
     margin-top: 40px;
 }
 
-.progress-1 {
+.progress-bar {
     width: 100%;
     height: 20px;
     background:
         linear-gradient(#0575b9 0 0) 0/0% no-repeat #fff;
+        transition: 0.5s linear;
+        
 }
 
 .summary-cards {
