@@ -5,34 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Best Practice</title>
+    <title>Elevate Your Code</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
+    <div id="confetti-container"></div>
     <header class="header">
         <div class="headercontainer">
             <div class="logo">
-                <a class="logolink" href="index.html">DevBest</a>
+                <a class="logolink" href="index.html">DevElevate</a>
             </div>
             <nav>
-                <a class="bestpracticelink activepage" href="index.html">Best Practices</a>
-                <a class="cvlink" href="cv.html">CV</a>
+                <a data-page="index.html" class="nav-link bestpracticelink" href="index.html">Best Practices</a>
+                <a data-page="cv.html" class="nav-link cvlink" href="cv.html">CV</a>
             </nav>
         </div>
     </header>
     <div class="container">
-        <section class="title-section">
-            <h1>Web Development Best Practices</h1>
-            <p>Assess your coding standards by selecting the practices you follow. Track your progress and see how your
+        <section class="title-section ">
+            <h1 class="fade-element-header">Web Development Best Practices</h1>
+            <p class="fade-element-p">Assess your coding standards by selecting the practices you follow. Track your
+                progress and see how your
                 development approach compares to industry best practices. Meet our
                 success criteria to receive a special reward!</p>
         </section>
-        <section class="card-section">
-            <div class="card-div">
+        <section class="card-section ">
+            <div class="card-div fade-element">
                 <div class="card-top html-header">
                     <div class="card-badge">
                         <span class="badge html-badge">HTML</span>
@@ -41,69 +45,257 @@
                     </div>
                     <h2 class="cardtop-title">Use Semantic HTML</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-content">
                     <p>
-                        Semantic HTML makes your code more readable, improves accessibility,
-                        and helps with SEO by clearly defining the different sections
-                        of your web page.
+                        Replace generic
+                        "div" tags with meaningful elements like "header", "main", "section",
+                        and "article" for clarity and SEO.
                     </p>
                 </div>
             </div>
-            <div class="card-div">
+
+
+
+
+            <div class="card-div fade-element">
                 <div class="card-top html-header">
                     <div class="card-badge">
                         <span class="badge html-badge">HTML</span>
-                        <input type="checkbox" onchange="selected()" name="html-checkbox"
+                        <input type="checkbox" onchange="selected()" name="html-checkbox" 
                             aria-label="Mark as completed" />
                     </div>
-                    <h2 class="cardtop-title">Use Semantic HTML</h2>
+                    <h2 class="cardtop-title">Maintain Hierarchical Headings</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-content">
                     <p>
-                        Semantic HTML makes your code more readable, improves accessibility,
-                        and helps with SEO by clearly defining the different sections
-                        of your web page.
+                        Properly use
+                        "h1" through "h6" tags in order, so screen readers and search engines
+                        can better parse your content.
                     </p>
                 </div>
             </div>
-            <div class="card-div">
+
+            <div class="card-div fade-element">
+                <div class="card-top html-header">
+                    <div class="card-badge">
+                        <span class="badge html-badge">HTML</span>
+                        <input type="checkbox" onchange="selected()" name="html-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Optimize for Accessibility</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Include alt text for images, label form fields, and use role and aria- attributes
+                        to improve screen reader support.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top html-header">
+                    <div class="card-badge">
+                        <span class="badge html-badge">HTML</span>
+                        <input type="checkbox" onchange="selected()" name="html-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Reduce Redundancy</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Keep your markup lean by avoiding unnecessary wrappers or deeply nested elements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top html-header">
+                    <div class="card-badge">
+                        <span class="badge html-badge">HTML</span>
+                        <input type="checkbox" onchange="selected()" name="html-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Validate Your Code</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Use a markup validator to catch errors and ensure your HTML follows standards
+                        for better cross-browser compatibility.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ====================== CSS Best Practices ====================== -->
+            <div class="card-div fade-element">
                 <div class="card-top css-header">
                     <div class="card-badge">
                         <span class="badge css-badge">CSS</span>
-                        <input type="checkbox" onchange="selected()" name="css-checkbox"
+                        <input type="checkbox" onchange="selected()" name="html-checkbox" css-1"
                             aria-label="Mark as completed" />
-
                     </div>
-                    <h2 class="cardtop-title">Use Semantic HTML</h2>
+                    <h2 class="cardtop-title">Adopt a Naming Convention</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-content">
                     <p>
-                        Semantic HTML makes your code more readable, improves accessibility,
-                        and helps with SEO by clearly defining the different sections
-                        of your web page.
+                        Use a consistent CSS strategy (e.g., BEM) to keep class names clear and maintainable.
                     </p>
                 </div>
             </div>
-            <div class="card-div">
+            <div class="card-div fade-element">
+                <div class="card-top css-header">
+                    <div class="card-badge">
+                        <span class="badge css-badge">CSS</span>
+                        <input type="checkbox" onchange="selected()" name="css-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Keep It DRY</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Group common properties and reuse them to avoid duplicating rules all over your stylesheet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top css-header">
+                    <div class="card-badge">
+                        <span class="badge css-badge">CSS</span>
+                        <input type="checkbox" onchange="selected()" name="css-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Optimize for Performance</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Prefer simpler selectors. Overly specific selectors can slow down rendering
+                        and complicate maintenance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top css-header">
+                    <div class="card-badge">
+                        <span class="badge css-badge">CSS</span>
+                        <input type="checkbox" onchange="selected()" name="css-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Use Responsive Design</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Employ media queries and fluid layouts to ensure your site looks great
+                        on all screen sizes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top css-header">
+                    <div class="card-badge">
+                        <span class="badge css-badge">CSS</span>
+                        <input type="checkbox" onchange="selected()" name="css-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Separate Structure & Style</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Avoid inline styles; keep your design rules in external CSS files for clean
+                        and scalable code.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ====================== JavaScript Best Practices ====================== -->
+            <div class="card-div fade-element">
                 <div class="card-top js-header">
                     <div class="card-badge">
                         <span class="badge js-badge">JavaScript</span>
-                        <input type="checkbox" onchange="selected()" name="js-checkbox"
+                        <input type="checkbox" onchange="selected()" name="js-checkbox" 
                             aria-label="Mark as completed" />
-
                     </div>
-                    <h2 class="cardtop-title">Use Semantic HTML</h2>
+                    <h2 class="cardtop-title">Keep Code Modular</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-content">
                     <p>
-                        Semantic HTML makes your code more readable, improves accessibility,
-                        and helps with SEO by clearly defining the different sections
-                        of your web page.
+                        Split functionality into small, focused functions or modules for easier debugging
+                        and testing.
                     </p>
                 </div>
             </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top js-header">
+                    <div class="card-badge">
+                        <span class="badge js-badge">JavaScript</span>
+                        <input type="checkbox" onchange="selected()" name="js-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Embrace Progressive Enhancement</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Ensure core functionality works without scripts, then enhance the experience
+                        with JavaScript.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top js-header">
+                    <div class="card-badge">
+                        <span class="badge js-badge">JavaScript</span>
+                        <input type="checkbox" onchange="selected()" name="js-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Write DRY Code</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Abstract repeated logic into reusable functions to maintain consistent behavior
+                        and simplify updates.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top js-header">
+                    <div class="card-badge">
+                        <span class="badge js-badge">JavaScript</span>
+                        <input type="checkbox" onchange="selected()" name="js-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Handle Errors Gracefully</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Use try/catch and meaningful console messages or alerts to handle unexpected
+                        issues and guide the user.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-div fade-element">
+                <div class="card-top js-header">
+                    <div class="card-badge">
+                        <span class="badge js-badge">JavaScript</span>
+                        <input type="checkbox" onchange="selected()" name="js-checkbox" 
+                            aria-label="Mark as completed" />
+                    </div>
+                    <h2 class="cardtop-title">Keep It Performant</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Minimize DOM manipulation, debounce heavy events, and optimize loops to prevent
+                        performance bottlenecks.
+                    </p>
+                </div>
+            </div>
+
         </section>
-        <section class="summary-section">
+        <section class="summary-section fade-element">
             <div class="summary-top">
                 <div class="summary-header">
                     <h2>Your Best Practices Summary</h2>
@@ -112,7 +304,7 @@
                 </div>
                 <div class="progress-bar"></div>
                 <div class="summary-cards">
-                    <div class="summary-card">
+                    <div class="summary-card ">
                         <p class="card-count html-count"></p>
                         <p class="card-text">HTML</p>
                     </div>
@@ -129,12 +321,13 @@
             <div class="summary-bottom">
                 <div class="reward">
                     <p class="reward-text">Congratulations here is your Reward:</p>
-                    <img src="" alt="rewardimage" class="rewardimage">
+                    <div class="image-container">
+                        <div id="loader"></div>
+                        <img src="" alt="rewardimage" class="rewardimage" style="display: none;">
+                    </div>
                 </div>
             </div>
-
-    </div>
-    </section>
+        </section>
     </div>
 
     <footer class="footer">
@@ -142,8 +335,7 @@
             <p>&copy; 2021 DevBest</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/AgileWebDev_IndividualProject/js/script.js"></script>
 </body>
 
 
