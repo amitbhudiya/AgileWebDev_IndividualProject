@@ -750,12 +750,12 @@ nav {
     width: 100%;
 }
 
-.cv-tabs:nth-child(1) .cv-tabs-link {
-    border-radius: var(--radius) 0 0 var(--radius);
+#about-tab {
+    border-radius: 5px 0 0 5px;
 }
 
-.cv-tabs:last-child .cv-tabs-link {
-    border-radius: 0 var(--radius) var(--radius) 0;
+#projects-tab {
+    border-radius: 0 5px 5px 0;
 }
 
 .cv-tabs-link {
