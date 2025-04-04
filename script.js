@@ -76,7 +76,7 @@ function selected() {
     }
 
     // Check if success criteria is met
-    if (selected >= total - 2) {
+    if (selected >= total - 3) {
         document.querySelector(".success-criteria").innerHTML =
             "Excellent! Your code follows industry-standard best practices."
         catimageajax()
@@ -84,7 +84,7 @@ function selected() {
         document.querySelector(".summary-bottom").style.display = "block"
     } else {
         document.querySelector(".success-criteria").innerHTML =
-            "Implement at least " + (total - 2) + " practices to meet the successful criteria."
+            "Implement at least " + (total - 3) + " practices to meet the successful criteria."
         document.querySelector(".summary-bottom").style.display = "none"
     }
 
