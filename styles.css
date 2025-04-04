@@ -1,10 +1,10 @@
+/* Global Styles */
 :root {
     --primary-color: #cbedf7;
     --primary-dark: #0575b9;
     --secondary-color: #2c3e50;
     --text-color: #000000;
     --text-light: #ffffff;
-    --text-dark: #222;
     --background-color: #cbedf7;
     --background-alt: #f0fbfd;
     --border-color: #e0e0e0;
@@ -12,13 +12,13 @@
     --transition: all 0.3s ease;
     --radius: 8px;
     --font-primary: "Inter", sans-serif;
-    --font-secondary: "Playfair Display", serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/*some body styles */
 body {
     margin: auto;
     font-family: var(--font-primary);
@@ -27,6 +27,7 @@ body {
     transition: var(--transition);
 }
 
+/* container styles */
 .container {
     margin-right: auto;
     margin-left: auto;
@@ -44,7 +45,7 @@ body {
 }
 
 
-
+/* Header and Navigation Styles */
 .header {
     background-color: var(--background-alt);
     box-shadow: var(--shadow);
@@ -119,6 +120,8 @@ nav {
     width: 100%;
 }
 
+
+/* Title and Card Section Styles */
 .title-section {
     text-align: center;
     height: 20rem;
@@ -189,7 +192,7 @@ nav {
     font-size: 0.75rem;
     font-weight: 500;
 }
-
+/* Badge Colors */
 .html-badge {
     background-color: #5757ff;
     color: #fff;
@@ -236,6 +239,7 @@ nav {
     margin: 0;
 }
 
+/* Summary Section Styles */
 .summary-section {
     margin-top: 40px;
 }
@@ -322,7 +326,7 @@ nav {
     transition: 0.10s ease-in-out;
     display: none;
 }
-
+/* Reward Section Styles */
 .reward {
     color: var(--text-color);
     display: flex;
@@ -343,10 +347,11 @@ nav {
 
 .rewardimage {
     width: 100%;
-    height: auto;
+    height: 350px;
     border-radius: 8px;
 }
 
+/* loader styles */
 #loader {
     display: none;
     margin-top: 10px;
@@ -367,26 +372,7 @@ nav {
         transform: rotate(360deg);
     }
 }
-
-.footercontainer {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    height: 2rem;
-}
-
-.footer {
-    background-color: var(--background-alt);
-    box-shadow: var(--shadow);
-    padding: 1rem 0;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1rem;
-    color: var(--text-color);
-    font-weight: 500;
-}
-
+/* Fade-in Animation Styles */
 .fade-element {
     opacity: 0;
     transform: translateY(10px);
@@ -466,6 +452,7 @@ nav {
 }
 
 /* CV Page Styles */
+/* left panel styles */
 .leftpanel {
     width: 30%;
     padding: 20px;
@@ -480,8 +467,6 @@ nav {
     gap: 20px;
     position: relative;
 }
-
-
 
 .profile-card {
     background-color: var(--background-alt);
@@ -727,7 +712,7 @@ nav {
     background-color: var(--primary-dark);
 }
 
-
+/* CV Tab  Styles */
 .rightpanel {
     width: 70%;
     padding: 20px;
@@ -773,15 +758,6 @@ nav {
     background-color: var(--primary-dark);
     color: var(--text-light);
 }
-
-
-
-
-
-
-
-
-
 
 /* Tab Content Styles */
 .tab-content {
@@ -977,6 +953,7 @@ nav {
     padding-left: 40px;
 }
 
+/* Card Body Styles */
 .card-body {
     font-size: 1rem;
     line-height: 1.5;
@@ -990,10 +967,52 @@ nav {
     margin: 0;
 }
 
+/* Reference Section Styles */
+.ref-title{
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+}
 .referance-content{
     background-color: var(--background-alt);
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     margin-top: 20px;
+}
+.referance-content a{
+    display: block;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+.referance-content h3{
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    
+}
+.referance-content p{
+    margin:  0;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+/* Footer Styles */
+.footercontainer {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    height: 2rem;
+}
+
+.footer {
+    background-color: var(--background-alt);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
 }

@@ -1,14 +1,14 @@
-const currentPage = window.location.pathname.split("/").pop();
-console.log(currentPage);
-
-const navLinks = document.querySelectorAll(".nav-link");
+const currentPage = window.location.pathname.split("/").pop(); // Get the current page name
+const navLinks = document.querySelectorAll(".nav-link"); // Select all navigation links
 
 navLinks.forEach((link) => {
 
     if (link.getAttribute("data-page") === currentPage) {
-        link.classList.add("activepage");
+        link.classList.add("activepage"); // Add active class to the current page link
     }
 });
+
+// Function to handle the "summary" section
 let totalhtmlselected = 0;
 let totalcssselected = 0;
 let totaljavascriptselected = 0;
@@ -92,16 +92,18 @@ function selected() {
     document.querySelector(".progress-bar").style.backgroundSize = progress + "%"
     document.querySelector(".progress-bar").innerHTML = progress + "%"
 }
+
+// Function to fetch a random cat image from The Cat API
+// and display it in the reward image section
 function catimageajax() {
-    $('#loader').show();
-    $('.rewardimage').hide();
+    $('#loader').show(); // Show the loader
+    $('.rewardimage').hide(); // Hide the image initially
     $.ajax({
-        url: 'https://api.thecatapi.com/v1/images/search',
+        url: 'https://api.thecatapi.com/v1/images/search', // API endpoint for random cat image
         method: 'GET',
         success: function (data) {
             if (data && data.length > 0) {
-                // data[0].url contains the image URL returned by the API
-                const catImageUrl = data[0].url;
+                const catImageUrl = data[0].url; // Get the cat image URL from the response
                 $('.rewardimage').attr('src', catImageUrl);
                 $('.rewardimage').on('load', function () {
                     $('#loader').hide();
@@ -110,19 +112,22 @@ function catimageajax() {
             }
         },
         error: function (error) {
-            console.error("Error fetching cat image:", error);
+            console.error("Error fetching cat image:", error); // Log any errors
             $('#loader').hide();
         }
     });
 }
 
+
+// Function to set a cookie with a specified name, value, and expiration days
 function setCookie(cookieName, cookieValue, days) {
     let date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Set expiration date
     let expires = "expires=" + date.toUTCString();
     document.cookie = cookieName + "=" + encodeURIComponent(cookieValue) + ";" + expires + ";path=/";
 }
 
+// Function to get the value of a cookie by its name
 function getCookie(cookieName) {
     let nameEQ = cookieName + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -143,7 +148,7 @@ function saveCheckboxesToCookie() {
     checkboxes.forEach((checkbox, index) => {
         states[index] = checkbox.checked ? 1 : 0;
     });
-    setCookie("checkboxStates", JSON.stringify(states), 1); // store for 7 days
+    setCookie("checkboxStates", JSON.stringify(states), 1); // store for 1 days
 }
 
 // Load checkbox states from the cookie and apply them
@@ -157,6 +162,8 @@ function loadCheckboxesFromCookie() {
         });
     }
 }
+
+// Function to create and launch confetti animation
 function congratulations() {
     const confettiContainer = document.getElementById("confetti-container");
     launchConfetti();
@@ -201,6 +208,8 @@ function congratulations() {
         confettiContainer.appendChild(confetti);
     }
 }
+
+
 // On page load, load cookie data, then set up listeners
 document.addEventListener("DOMContentLoaded", () => {
     // Load any previously saved checkbox states
@@ -217,13 +226,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Function to introduce the element fade-in effect
+// This function uses Intersection Observer API to detect when elements are in view
 document.addEventListener("DOMContentLoaded", () => {
     // Grab all the elements that should fade in
     const fadeElements = document.querySelectorAll(".fade-element");
     const fadeElementsheader = document.querySelectorAll(".fade-element-header");
     const fadeElementsp = document.querySelectorAll(".fade-element-p");
 
-    // Option A: IntersectionObserver approach (modern & efficient)
     const observerOptions = {
         root: null,      // use the browser viewport as the container
         rootMargin: "0px",
